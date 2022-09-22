@@ -25,7 +25,7 @@ function Actor() {
     
     getActorsData();
     /* eslint-disable */
-  }, [inputVal]);
+  });
   // console.log(actorsData);
   return (
     <>
@@ -67,7 +67,11 @@ function Actor() {
                         <img
                           src="https://www.prokerala.com/movies/assets/img/no-poster-available.jpg"
                           style={{ width: "230px", height: "325px" }}
-                          alt='poster'
+                          alt={
+                          element.person.name != null
+                            ? element.person.name
+                            : "Not found"
+                        }
                         />
                       </div>
                     )}
