@@ -22,7 +22,7 @@ function Actor() {
     };
     useEffect(() => {
         getshowData();
-    }, [inputVal]);
+    });
     // console.log(showData);
     return (
         <>
@@ -70,6 +70,11 @@ function Actor() {
                                           width: "230px",
                                           height: "325px",
                                         }}
+                                        alt={
+                                        element.show.name != null
+                                          ? element.show.name
+                                          : "Not found"
+                                      }
                                       />
                                     </div>
                                   )}
