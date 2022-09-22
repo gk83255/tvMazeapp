@@ -20,8 +20,11 @@ function Actor() {
       console.log(error);
     }
   };
+  
   useEffect(() => {
+    
     getActorsData();
+    /* eslint-disable */
   }, [inputVal]);
   // console.log(actorsData);
   return (
@@ -64,6 +67,7 @@ function Actor() {
                         <img
                           src="https://www.prokerala.com/movies/assets/img/no-poster-available.jpg"
                           style={{ width: "230px", height: "325px" }}
+                          alt='poster'
                         />
                       </div>
                     )}
@@ -90,3 +94,10 @@ function Actor() {
 }
 
 export default Actor;
+
+// "eslintConfig": {
+//   "extends": [
+//     "react-app",
+//     "react-app/jest"
+//   ]
+// },
